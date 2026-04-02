@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.niv{
+    margin: 0 0 10px;
+    background: linear-gradient(to right, rgb(32, 218, 218),#c2e9ff);
+}
+
+.lin{
+    display: block;
+    font-size: 90px;
+    text-align: center;
+    font-family: 'Times New Roman';
+    color: red;
+}
+
+/* меню */
+.nav{
+    background: linear-gradient(to bottom, rgb(32, 218, 218),#c2e9ff);
+    box-shadow:5px 3px rgb(165,165,165);
+}
+
+.nav::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* пункты меню */
+.nav .pt{
+    background: linear-gradient(to bottom, rgb(172, 243, 243),#c2e9ff);
+    text-decoration:none;
+    font-size:20px;
+    text-align:center;
+    display:block;
+    float:left;
+    border:solid;
+    border-width:0 0.5px 0 0;
+    border-radius:4px;
+    padding:13px 35px;
+    margin:0 1px;
+    color:black;
+    text-transform: uppercase;
+    font-weight:700;
+}
+
+.nav .pt:hover{
+    background: linear-gradient(to bottom, rgb(32, 218, 218),#c2e9ff);
+}
+
+/* контейнер для подменю */
+.nav div{
+    float:left;
+    position:relative;
+}
+
+/* выпадающее меню */
+.nav div .drop{
+    position:absolute;
+    display:none;
+    top:100%;
+    left:0;
+    z-index: 9999;
+    min-width: 100%;
+}
+
+/* элементы подменю */
+.drop_item{
+    text-decoration:none;
+    display:block;
+    background: linear-gradient(to bottom, rgb(172, 243, 243),#c2e9ff);
+    color:black;
+    border:solid;
+    border-width:0 0.5px 0 0;
+    border-radius:4px;
+    padding:13px 35px;
+}
+
+.drop_item:hover{
+    background: linear-gradient(to bottom, rgb(32, 218, 218),#c2e9ff);
+}
+
+.nav div:hover > .drop{
+    display:block;
+}
+
+
+
+/* колонки */
+.left {
+    float: left;
+    width: 205px;
+    background: rgb(32, 218, 218);
+    margin: 10px 10px 20px 5px;
+    box-shadow: 4px 4px 0 gray;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgb(32, 218, 218),#c2e9ff);
+    
+}
+
+.vleft{
+    background: rgb(167, 226, 232);
+    margin: 20px 10px 10px 20px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0 gray;
+}
+
+.l{
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    margin: 5px 5px 0px 5px;
+    padding: 5px;
+}
+
+.ln{
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Times New Roman';
+    background-color: rgb(59, 169, 169);
+    margin: 5px 5px 5px 5px;
+    border-radius: 8px;
+}
+
+.right {
+    float: right;
+    width: 205px;
+    background: rgb(32, 218, 218);
+    margin: 10px 10px 20px 10px;
+    box-shadow: 4px 4px 0 gray;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgb(32, 218, 218),#c2e9ff);
+}
+
+.center {
+    overflow: hidden;
+    background: rgb(32, 218, 218);
+    text-align: center;
+    margin: 10px;
+    box-shadow: 4px 4px 0 gray;
+    border-radius: 5px;
+    background: linear-gradient(to right, rgb(32, 218, 218),#c2e9ff);
+}
+
+.card {
+    position: relative;
+    width:100px;
+    overflow: hidden;
+    margin:15px;
+    float:left;
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 1px 15px rgb(82, 81, 81);
+}
+
+.vimg{
+    width:100%;
+    height:100%;
+}
+
+/* всплывашка */
+.vsp{
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+
+    text-align:center;
+    line-height:120px;
+
+    background: rgba(0,0,0,0.6);
+    color:white;
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+.card:hover .vsp{
+    left: 0;
+}
